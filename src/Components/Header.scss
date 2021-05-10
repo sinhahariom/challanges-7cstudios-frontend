@@ -1,0 +1,32 @@
+.header-parent{
+    height: 70px;
+    width: 100%;
+    border-bottom: 1px solid #ffd1d1;
+    display: flex;
+    align-items: center;
+    img{
+        height: 40px;
+        width: 40px;
+        padding-left: 1%;
+        cursor: pointer;
+    }
+    span{
+        flex: 1;
+        font-weight: bold;
+        font-size: 1.5rem;
+        padding-left: 2%;
+    }
+    .user-wrapper{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        span{
+            font-size: 0.7rem;
+            padding:5%;
+            width: 100px;
+        }
+        img{
+            cursor: pointer;
+        }
+    }
+}

@@ -1,0 +1,20 @@
+.left-nav-parent{
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #ffd1d1;
+    .nav-option{
+        height: 70px;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        padding-left: 10%;
+        border-bottom:1px solid #ffd1d1;
+        font-weight: bold;
+        cursor: not-allowed;
+        &:last-child{
+            background-color: #b76d4d;
+            cursor: pointer;
+        }
+    }
+}
