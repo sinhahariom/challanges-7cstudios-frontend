@@ -12,7 +12,6 @@ const DeleteUser = ()=>{
 
 const CustomTableContents = ()=>{
     const {userDetails} = useContext(UserDataStore);
-    console.log(userDetails);
     return(
         userDetails.map((users)=>(
             <div className="table-data" key={users.id}>
@@ -44,9 +43,10 @@ const CustomTable = ()=>{
 }
 
 const UserBody = () => {
-
+    const {toggleAddUser, setToggleAddUser} = useContext(UserDataStore);
     return ( 
         <div className="user-body-wrapper">
+            <button onClick={()=>setToggleAddUser(!toggleAddUser)} disabled={toggleAddUser === true}>Add User</button>
             <div className="table-wrapper">
                 <CustomTable></CustomTable>
             </div>

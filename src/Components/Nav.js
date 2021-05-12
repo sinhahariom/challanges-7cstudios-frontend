@@ -3,7 +3,7 @@ import './Nav.scss';
 
 const NavOptions = ({nav})=>{
     return nav.map(navOptions=>(
-        <div className="nav-option">{navOptions}</div>
+        <div key={navOptions} className="nav-option">{navOptions}</div>
     ))
 }
 

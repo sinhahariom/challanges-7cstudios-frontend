@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+
+.add-user-parent{
+    position: absolute;
+    left: 30%;
+    top: 30%;
+    translate: (-50%,-50%);
+    display: flex;
+    height: 400px;
+    width: 750px;
+    display: flex;
+    flex-direction: row;
+    box-shadow: 2px 2px 2px 2px #ffa2a2;
+    background-color: white;
+    z-index: 9999;
+    .left-detail{
+        width: 40%;
+        background-color: #d6825a;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        img{
+            height: 150px;
+            width: 150px;
+            position: absolute;
+            left: 10%;
+            top: 10%;
+            translate: (-50%,-50%);
+        }
+        span{
+            text-align: center;
+            word-break: inherit;
+            position: absolute;
+            left: 5%;
+            top: 55%;
+            translate: (-50%,-50%);
+            width: 30%;
+            color: white;
+            font-weight: bold;
+        }
+    }
+    .right-detail{
+        height: 100%;   
+        width: 60%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .form-wrapper{
+            height: 90%;
+            width: 90%;
+            span{
+                font-weight: bold;
+                font-size: 1rem;
+                font-family: 'Rubik', sans-serif;
+                margin-bottom: 5rem;
+            }
+           .form{
+               margin-top: 3rem;
+                p{
+                    font-weight: bold;
+                }
+                input{
+                    height: 25px;
+                    width: 350px;
+                    border-radius: 5px;
+                    outline: none;
+                    border: 0.2px solid #ffcaca;
+                    font-family: 'Rubik', sans-serif;
+                }
+                select{
+                    height: 35px;
+                    width: 245px;
+                    border-radius: 5px;
+                    outline: none;
+                    border: 0.2px solid #ffcaca;
+                    options{
+                        font-family: 'Rubik', sans-serif;
+                    }
+                }
+           }
+           .btn-wrapper{
+               display: flex;
+               justify-items: center;
+               margin-top: 3rem;
+               button{
+                   height: 35px;
+                   width: 100px;
+                   border: none;
+                   outline: none;
+                   border-radius: 5px;
+                   color: white;
+                   cursor: pointer;
+                   background-color: #b6e04e;
+                   &:not(:last-child){
+                       margin-right: 2rem;
+                       margin-left: 8rem;
+                   }
+                   &:last-child{
+                    background-color: #e04e4e;
+                }
+               }
+           }
+        }
+    }
+}
