@@ -4,21 +4,23 @@ import { UserDataStore } from '../Context/UserDataStore';
 
 const FormComponent = ()=>{
 
-    const {toggleAddUser, setToggleAddUser,userDetails,setUserDetails} = useContext(UserDataStore);
-    const [idCounter, setIdCounter] = useState(0);
-    const [email,setEmail] = useState('');
-    const [role,setRole] = useState('');
-    const opt = ['ADMIN','USER','OTHER'];
+
+    //Using the Context State here to bind the data from the 
+    //User JSON with the User PopUp Input.
+    const {toggleAddUser, setToggleAddUser,userDetails,setUserDetails, counter, setCounter} = useContext(UserDataStore);
+    const [email,setEmail] = useState();
+    const [role,setRole] = useState();
+    const optionValues = ['','ADMIN','USER','OTHER'];
+
     const addUser = ()=>{
-        setIdCounter(idCounter+1);
+        setCounter(counter + 1);
         let temp = {};
-        temp.id = idCounter;
+        temp.id = counter;    
         temp.user = email;
         temp.last_signed_in = '__Timestamp';
         temp.role = role;
         userDetails.push(temp);
         setUserDetails(userDetails);
-        console.log(userDetails);
         setToggleAddUser(!toggleAddUser);
     }
 
@@ -27,11 +29,11 @@ const FormComponent = ()=>{
             <span>User Information</span>
             <div className="form">
                 <p>Email Id Of the User</p>
-                <input type="email" onChange={(e)=>setEmail(e.target.value)}></input>
+                <input required={true} type="email" onChange={(e)=>setEmail(e.target.value)}></input>
                 <p>Role</p>
-                <select onChange={(e)=> setRole(e.target.value)} value={opt[0]}>
+                <select required onChange={(e)=> setRole(e.target.value)}>
                    {
-                       opt.map(options=>(
+                       optionValues.map(options=>(
                            <option key={options} value={options}>{options}</option>
                        ))
                    }
@@ -39,13 +41,14 @@ const FormComponent = ()=>{
             </div>
             <div className="btn-wrapper">
                 <button onClick={()=>setToggleAddUser(!toggleAddUser)}>Cancel</button>
-                <button onClick={addUser}>Add</button>
+                <button onClick={()=> addUser()}>Add</button>
             </div>
         </div>
     )
 }
 
 const AddUser = () => {
+    
     return ( 
         <div className="add-user-parent">
             <div className="left-detail">

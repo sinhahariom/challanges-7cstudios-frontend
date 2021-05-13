@@ -1,6 +1,10 @@
 import './Header.scss';
 
 const Header = () => {
+
+    //The Header Component here has Logo, App Name, User Profile and User Name as the elements.
+    //Here, I have used flex box and made the elements division even based on Mock Up.
+     
     return ( 
         <div className="header-parent">
             <img alt="NA" src="data:image/svg+xml,%3Csvg id='Layer_1' enable-background='new 0 0 512 512' height='512' viewBox='0 0 512 512' width='512' xmlns='http://www.w3.org/2000/svg'%3E%3Cg%3E%3Cg%3E%3Ccircle cx='256' cy='256' fill='%23f33' r='256'/%3E%3C/g%3E%3Cpath d='m325.466 502.456c103.49-29.111 180.419-121.644 186.184-233.006l-150.15-150.15-177.229 15.21-21.021 42.79 109.431 113.224-57.291 101.856z' fill='%23c60000'/%3E%3Cg%3E%3Cpath d='m361.5 119.3-85.34 273.08h-60.77l67.22-215.08h-119.36v-58z' fill='%23f8fffb'/%3E%3C/g%3E%3Cg%3E%3Cpath d='m361.5 119.3-85.34 273.08h-20.16v-129.94l26.61-85.14h-26.61v-58z' fill='%23d8d8d8'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"></img>
